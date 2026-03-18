@@ -2,7 +2,7 @@ import Image from "next/image";
 
 interface Skill {
   name: string;
-  icon?: string;
+  icon: string;
 }
 
 const categories: { name: string; skills: Skill[]; colorClass: string }[] = [
@@ -10,39 +10,39 @@ const categories: { name: string; skills: Skill[]; colorClass: string }[] = [
     name: "Languages",
     colorClass: "bg-primary/15 text-primary",
     skills: [
-      { name: "TypeScript" },
-      { name: "JavaScript" },
-      { name: "Java" },
-      { name: "Go" },
-      { name: "SQL" },
-      { name: "Kotlin" },
-      { name: "HTML" },
-      { name: "CSS" },
+      { name: "TypeScript", icon: "/icons/TypeScript.svg" },
+      { name: "JavaScript", icon: "/icons/JavaScript.svg" },
+      { name: "Java", icon: "/icons/Java.svg" },
+      { name: "Go", icon: "/icons/Go.svg" },
+      { name: "SQL", icon: "/icons/SQL.svg" },
+      { name: "Kotlin", icon: "/icons/Kotlin.svg" },
+      { name: "HTML", icon: "/icons/HTML5.svg" },
+      { name: "CSS", icon: "/icons/CSS3.svg" },
     ],
   },
   {
     name: "Frameworks",
     colorClass: "bg-accent/15 text-accent",
     skills: [
-      { name: "React" },
-      { name: "Next.js" },
-      { name: "Vue.js" },
-      { name: "Electron" },
-      { name: "Capacitor" },
+      { name: "React", icon: "/icons/React.svg" },
+      { name: "Next.js", icon: "/icons/Next.js.svg" },
+      { name: "Vue.js", icon: "/icons/Vue.js.svg" },
+      { name: "Electron", icon: "/icons/Electron.svg" },
+      { name: "Capacitor", icon: "/icons/Capacitor.svg" },
     ],
   },
   {
     name: "Tools",
     colorClass: "bg-muted text-muted-foreground",
     skills: [
-      { name: "Git" },
-      { name: "NPM" },
-      { name: "Docker" },
-      { name: "PostgreSQL" },
-      { name: "Kubernetes" },
-      { name: "Claude Code" },
-      { name: "Vite" },
-      { name: "Figma" },
+      { name: "Git", icon: "/icons/Git.svg" },
+      { name: "NPM", icon: "/icons/NPM.svg" },
+      { name: "Docker", icon: "/icons/Docker.svg" },
+      { name: "PostgreSQL", icon: "/icons/PostgresSQL.svg" },
+      { name: "Kubernetes", icon: "/icons/Kubernetes.svg" },
+      { name: "Claude Code", icon: "/icons/ClaudeCode.svg" },
+      { name: "Vite", icon: "/icons/Vite.js.svg" },
+      { name: "Figma", icon: "/icons/Figma.svg" },
     ],
   },
 ];
@@ -63,15 +63,13 @@ export default function SkillsGrid() {
                   key={skill.name}
                   className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-mono ${category.colorClass}`}
                 >
-                  {skill.icon && (
-                    <Image
-                      src={skill.icon}
-                      alt=""
-                      width={16}
-                      height={16}
-                      className="inline-block"
-                    />
-                  )}
+                  <Image
+                    src={skill.icon}
+                    alt=""
+                    width={16}
+                    height={16}
+                    className="inline-block"
+                  />
                   {skill.name}
                 </span>
               ))}
