@@ -48,7 +48,7 @@ export default function SocialLinks() {
         <a
           key={link.label}
           href={link.href}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:bg-muted transition-colors text-sm"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-md border border-border hover:border-primary/50 hover:text-primary hover:bg-primary/5 transition-colors text-sm"
         >
           {link.icon}
           {link.label}

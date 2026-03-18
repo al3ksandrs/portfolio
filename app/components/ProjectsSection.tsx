@@ -135,6 +135,7 @@ export default function ProjectsSection() {
               {selected.longDescription || selected.description}
             </p>
 
+            <div className="flex start">
             <a
               href={selected.href}
               target="_blank"
@@ -157,6 +158,7 @@ export default function ProjectsSection() {
                 <line x1="10" y1="14" x2="21" y2="3" />
               </svg>
             </a>
+            </div>
           </div>
         )}
       </Modal>

@@ -28,7 +28,7 @@ export default function ExperienceTimeline() {
       <h2 className="text-2xl font-semibold tracking-tight">Experience</h2>
       <div className="space-y-8">
         {experiences.map((exp) => (
-          <div key={exp.period} className="relative pl-6 border-l border-border">
+          <div key={exp.period} className="relative pl-6 border-l-2 border-primary/30">
             <div className="absolute left-[-5px] top-1.5 w-2.5 h-2.5 rounded-full bg-primary" />
             <p className="font-mono text-sm text-muted-foreground mb-1">
               {exp.period}

@@ -21,7 +21,7 @@ export default function ProjectCard({
   return (
     <button
       onClick={onClick}
-      className="group block w-full text-left rounded-lg border border-border bg-card p-4 transition-all hover:shadow-md hover:-translate-y-0.5 cursor-pointer"
+      className="group block w-full text-left rounded-lg border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/40 hover:-translate-y-0.5 cursor-pointer"
     >
       {image ? (
         <div className="relative aspect-video w-full rounded-md overflow-hidden mb-4">
@@ -46,7 +46,7 @@ export default function ProjectCard({
         {tags.map((tag) => (
           <span
             key={tag}
-            className="px-2 py-0.5 text-xs rounded bg-muted font-mono"
+            className="px-2 py-0.5 text-xs rounded bg-primary/10 text-primary font-mono"
           >
             {tag}
           </span>

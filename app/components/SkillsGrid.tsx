@@ -5,9 +5,10 @@ interface Skill {
   icon?: string;
 }
 
-const categories: { name: string; skills: Skill[] }[] = [
+const categories: { name: string; skills: Skill[]; colorClass: string }[] = [
   {
     name: "Languages",
+    colorClass: "bg-primary/15 text-primary",
     skills: [
       { name: "TypeScript" },
       { name: "JavaScript" },
@@ -18,6 +19,7 @@ const categories: { name: string; skills: Skill[] }[] = [
   },
   {
     name: "Frameworks",
+    colorClass: "bg-accent/15 text-accent",
     skills: [
       { name: "React" },
       { name: "Next.js" },
@@ -28,6 +30,7 @@ const categories: { name: string; skills: Skill[] }[] = [
   },
   {
     name: "Tools",
+    colorClass: "bg-muted text-muted-foreground",
     skills: [
       { name: "Git" },
       { name: "Docker" },
@@ -52,7 +55,7 @@ export default function SkillsGrid() {
               {category.skills.map((skill) => (
                 <span
                   key={skill.name}
-                  className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm bg-muted font-mono"
+                  className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-sm font-mono ${category.colorClass}`}
                 >
                   {skill.icon && (
                     <Image
