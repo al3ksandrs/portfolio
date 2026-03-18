@@ -1,12 +1,11 @@
 import ThemeToggle from "./ThemeToggle";
+import Oneko from "./Oneko";
 
 export default function Header() {
   return (
-    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
+    <header className="z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="/" className="text-lg font-medium tracking-tight">
-          [title]
-        </a>
+        <Oneko />
         <ThemeToggle />
       </div>
     </header>
