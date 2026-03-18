@@ -6,58 +6,34 @@ import ProjectCard from "./ProjectCard";
 import type { Project } from "./ProjectCard";
 import Modal from "./Modal";
 
-const featured: Project[] = [
+const latest: Project[] = [
   {
-    title: "[Project Alpha]",
+    title: "Command Doctrine",
     description:
-      "[A brief description of a featured project and what problem it solves.]",
+      "Wargame utilizing LLMs to interpret natural language orders and generate custom scenarios.",
     longDescription:
-      "[A longer, more detailed description of this project. Explain the motivation, architecture decisions, challenges faced, and outcomes achieved. This is the expanded view shown in the modal.]",
-    tags: ["Next.js", "TypeScript", "PostgreSQL"],
-    href: "#",
+      "After playing textual wargame simulations with ChatGPT, I was inspired to create Command Doctrine. Command Doctrine is a cross platform wargame that uses LLMs to interpret natural language orders and generate custom scenarios. It is built with React and TypeScript for the frontend, Konva.js for the canvas and Fastify for the backend. This project allowed me to explore the integration of AI into applications and developing cross platform applications.",
+    tags: ["AI Integration", "Game", "Cross-platform"],
+    href: "https://www.command-doctrine.com/",
   },
   {
-    title: "[Project Beta]",
+    title: "LeerMatch",
     description:
-      "[A brief description of another featured project showcasing different skills.]",
+      "Web application that matches students with tutors based on their learning preferences.",
     longDescription:
-      "[A longer, more detailed description of this project. Cover the tech stack choices, your role, and what you learned from building it.]",
-    tags: ["React", "Node.js", "Docker"],
+      "LeerMatch is a team built software project developed during a university semester. The platform is designed to safely connect students (and parents) with qualified teachers for academic support. The core focus of the system is child safety, role-based access control, and matching between learners and educators.",
+    tags: ["Web Application", "Deployment"],
     href: "#",
   },
 ];
 
 const other: Project[] = [
   {
-    title: "[Side Project One]",
-    description: "[A short description of a smaller side project.]",
+    title: "AutoMagic",
+    description: "Smart plug mobile application integrating sensor data.",
     longDescription:
-      "[Extended description with more details about this side project.]",
-    tags: ["Python", "FastAPI"],
-    href: "#",
-  },
-  {
-    title: "[Side Project Two]",
-    description: "[A short description of another side project.]",
-    longDescription:
-      "[Extended description with more details about this side project.]",
-    tags: ["Go", "CLI"],
-    href: "#",
-  },
-  {
-    title: "[Side Project Three]",
-    description: "[A short description of yet another project.]",
-    longDescription:
-      "[Extended description with more details about this side project.]",
-    tags: ["TypeScript", "Tailwind"],
-    href: "#",
-  },
-  {
-    title: "[Side Project Four]",
-    description: "[A brief description of one more project.]",
-    longDescription:
-      "[Extended description with more details about this side project.]",
-    tags: ["React", "GraphQL"],
+      "The AutoMagic smartplug controller app was developed to manage and interact with smartplugs. This was developed as a team project for a mobile development semester. It is an Android application made with Kotlin. It utilizes Bluetooth and QR code scanning to connect and configure new plug nodes and sensors.",
+    tags: ["Mobile Application"],
     href: "#",
   },
 ];
@@ -69,9 +45,9 @@ export default function ProjectsSection() {
     <>
       <section className="space-y-10">
         <div className="space-y-4">
-          <h2 className="text-2xl font-semibold tracking-tight">Featured</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">Latest</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            {featured.map((project) => (
+            {latest.map((project) => (
               <ProjectCard
                 key={project.title}
                 project={project}

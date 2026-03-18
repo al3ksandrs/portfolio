@@ -12,9 +12,12 @@ const categories: { name: string; skills: Skill[]; colorClass: string }[] = [
     skills: [
       { name: "TypeScript" },
       { name: "JavaScript" },
-      { name: "Python" },
+      { name: "Java" },
       { name: "Go" },
       { name: "SQL" },
+      { name: "Kotlin" },
+      { name: "HTML" },
+      { name: "CSS" },
     ],
   },
   {
@@ -23,9 +26,9 @@ const categories: { name: string; skills: Skill[]; colorClass: string }[] = [
     skills: [
       { name: "React" },
       { name: "Next.js" },
-      { name: "Node.js" },
-      { name: "Tailwind CSS" },
-      { name: "Express" },
+      { name: "Vue.js" },
+      { name: "Electron" },
+      { name: "Capacitor" },
     ],
   },
   {
@@ -33,10 +36,13 @@ const categories: { name: string; skills: Skill[]; colorClass: string }[] = [
     colorClass: "bg-muted text-muted-foreground",
     skills: [
       { name: "Git" },
+      { name: "NPM" },
       { name: "Docker" },
       { name: "PostgreSQL" },
-      { name: "Linux" },
-      { name: "VS Code" },
+      { name: "Kubernetes" },
+      { name: "Claude Code" },
+      { name: "Vite" },
+      { name: "Figma" },
     ],
   },
 ];

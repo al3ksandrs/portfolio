@@ -4,11 +4,10 @@ export default function Hero() {
       <div className="w-24 h-24 rounded-full bg-muted ring-2 ring-primary/15 flex items-center justify-center text-muted-foreground text-sm">
         [Photo]
       </div>
-      <h1 className="text-3xl font-semibold tracking-tight">[Name]</h1>
-      <p className="text-lg text-primary">[Title / Role]</p>
+      <h1 className="text-3xl font-semibold tracking-tight">Aleksandrs Soskolainens</h1>
+      <p className="text-lg text-primary">Software Engineer</p>
       <p className="text-foreground/80 max-w-lg">
-        [Bio tagline — a short sentence or two describing what you do and what
-        you&apos;re passionate about.]
+        Fourth-year Computer Science student at Amsterdam University of Applied Sciences. Passionate about building impactful software and learning new technologies.
       </p>
     </section>
   );

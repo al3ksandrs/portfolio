@@ -5,7 +5,7 @@ export default function Header() {
     <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
       <div className="max-w-3xl mx-auto px-6 py-4 flex items-center justify-between">
         <a href="/" className="text-lg font-medium tracking-tight">
-          [Name]
+          [title]
         </a>
         <ThemeToggle />
       </div>

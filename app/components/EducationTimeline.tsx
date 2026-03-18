@@ -1,17 +1,17 @@
 const education = [
   {
-    period: "2015 — 2019",
-    title: "[B.Sc. Computer Science]",
-    organization: "[University]",
+    period: "2022 — 2027",
+    title: "HBO-ICT",
+    organization: "Amsterdam University of Applied Sciences",
     description:
-      "[Notable coursework, projects, or achievements during education.]",
+      "Creating software solutions in a team environment, agile methodologies, software architecture, and various programming languages and technologies.",
   },
   {
-    period: "2013 — 2015",
-    title: "[Relevant Certification or Diploma]",
-    organization: "[Institution]",
+    period: "2016 — 2022",
+    title: "HAVO",
+    organization: "Jan van Egmond Lyceum",
     description:
-      "[Description of what was studied and key takeaways.]",
+      "",
   },
 ];
 

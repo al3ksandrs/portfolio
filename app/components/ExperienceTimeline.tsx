@@ -1,24 +1,10 @@
 const experiences = [
   {
-    period: "2023 — Present",
-    title: "[Senior Developer]",
-    organization: "[Company C]",
+    period: "2025 — Present",
+    title: "Software Engineer",
+    organization: "Digitect",
     description:
-      "[Description of current role, responsibilities, and key achievements.]",
-  },
-  {
-    period: "2021 — 2023",
-    title: "[Full-Stack Developer]",
-    organization: "[Company B]",
-    description:
-      "[Description of previous role, what you built, and impact delivered.]",
-  },
-  {
-    period: "2019 — 2021",
-    title: "[Junior Developer]",
-    organization: "[Company A]",
-    description:
-      "[Description of early career role, technologies learned, and growth.]",
+      "IDE application development using Theia, React and Go.",
   },
 ];
 
