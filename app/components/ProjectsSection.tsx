@@ -1,10 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import ProjectCard from "./ProjectCard";
 import type { Project } from "./ProjectCard";
 import Modal from "./Modal";
+import ProjectMedia from "./ProjectMedia";
 
 const latest: Project[] = [
   {
@@ -15,6 +15,8 @@ const latest: Project[] = [
       "After playing textual wargame simulations with ChatGPT, I was inspired to create Command Doctrine. Command Doctrine is a cross platform wargame that uses LLMs to interpret natural language orders and generate custom scenarios. It is built with React and TypeScript for the frontend, Konva.js for the canvas and Fastify for the backend. This project allowed me to explore the integration of AI into applications and developing cross platform applications.",
     tags: ["AI Integration", "Game", "Cross-platform"],
     href: "https://www.command-doctrine.com/",
+    previewMedia: "/project-images/command-doctrine-1.mp4",
+    detailMedia: "/project-images/command-doctrine-2.mp4",
   },
   {
     title: "LeerMatch",
@@ -75,21 +77,10 @@ export default function ProjectsSection() {
       <Modal open={selected !== null} onClose={() => setSelected(null)}>
         {selected && (
           <div className="space-y-6">
-            {selected.image ? (
-              <div className="relative aspect-video w-full rounded-md overflow-hidden">
-                <Image
-                  src={selected.image}
-                  alt={selected.title}
-                  fill
-                  className="object-cover"
-                  unoptimized={selected.image.endsWith(".gif")}
-                />
-              </div>
-            ) : (
-              <div className="aspect-video w-full rounded-md bg-muted flex items-center justify-center text-muted-foreground text-sm">
-                [Project Image]
-              </div>
-            )}
+            <ProjectMedia
+              src={selected.detailMedia ?? selected.previewMedia}
+              alt={selected.title}
+            />
 
             <div className="space-y-2">
               <h2 className="text-2xl font-semibold tracking-tight">

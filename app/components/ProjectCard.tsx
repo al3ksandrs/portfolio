@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ProjectMedia from "./ProjectMedia";
 
 export interface Project {
   title: string;
@@ -6,7 +6,8 @@ export interface Project {
   longDescription?: string;
   tags: string[];
   href: string;
-  image?: string;
+  previewMedia?: string;
+  detailMedia?: string;
 }
 
 export default function ProjectCard({
@@ -16,28 +17,16 @@ export default function ProjectCard({
   project: Project;
   onClick: () => void;
 }) {
-  const { title, description, tags, image } = project;
+  const { title, description, tags, previewMedia, detailMedia } = project;
 
   return (
     <button
       onClick={onClick}
       className="group block w-full text-left rounded-lg border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/40 hover:-translate-y-0.5 cursor-pointer"
     >
-      {image ? (
-        <div className="relative aspect-video w-full rounded-md overflow-hidden mb-4">
-          <Image
-            src={image}
-            alt={title}
-            fill
-            className="object-cover"
-            unoptimized={image.endsWith(".gif")}
-          />
-        </div>
-      ) : (
-        <div className="aspect-video w-full rounded-md bg-muted mb-4 flex items-center justify-center text-muted-foreground text-sm">
-          [Project Image]
-        </div>
-      )}
+      <div className="mb-4">
+        <ProjectMedia src={previewMedia ?? detailMedia} alt={title} />
+      </div>
       <h3 className="font-medium group-hover:underline mb-1">{title}</h3>
       <p className="text-sm text-muted-foreground line-clamp-2 mb-3">
         {description}
