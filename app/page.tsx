@@ -7,6 +7,7 @@ import ExperienceTimeline from "./components/ExperienceTimeline";
 import EducationTimeline from "./components/EducationTimeline";
 import Footer from "./components/Footer";
 import SlideIn from "./components/SlideIn";
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         </SlideIn>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
