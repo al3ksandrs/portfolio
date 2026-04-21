@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useState } from "react";
+import Spinner from "./Spinner";
 
 const VIDEO_ASSET_PATTERN = /\.(mp4|webm|ogg|mov)(?:\?.*)?$/i;
 const GIF_ASSET_PATTERN = /\.gif(?:\?.*)?$/i;
@@ -18,6 +22,8 @@ export default function ProjectMedia({
   src?: string;
   alt: string;
 }) {
+  const [loaded, setLoaded] = useState(false);
+
   if (!src) {
     return (
       <div className="aspect-video w-full rounded-md bg-muted flex items-center justify-center text-muted-foreground text-sm">
@@ -28,29 +34,45 @@ export default function ProjectMedia({
 
   if (isVideoAsset(src)) {
     return (
-      <div className="aspect-video w-full rounded-md overflow-hidden bg-muted">
+      <div className="relative aspect-video w-full rounded-md overflow-hidden bg-muted">
+        {!loaded && (
+          <div className="absolute inset-0 flex items-center justify-center">
+            <Spinner />
+          </div>
+        )}
         <video
           src={src}
           aria-label={alt}
-          className="h-full w-full object-cover"
+          className={`h-full w-full object-cover transition-opacity duration-300 ${
+            loaded ? "opacity-100" : "opacity-0"
+          }`}
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
+          onLoadedData={() => setLoaded(true)}
         />
       </div>
     );
   }
 
   return (
-    <div className="relative aspect-video w-full rounded-md overflow-hidden">
+    <div className="relative aspect-video w-full rounded-md overflow-hidden bg-muted">
+      {!loaded && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <Spinner />
+        </div>
+      )}
       <Image
         src={src}
         alt={alt}
         fill
-        className="object-cover"
+        className={`object-cover transition-opacity duration-300 ${
+          loaded ? "opacity-100" : "opacity-0"
+        }`}
         unoptimized={isGifAsset(src)}
+        onLoad={() => setLoaded(true)}
       />
     </div>
   );
