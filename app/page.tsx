@@ -14,8 +14,8 @@ export default function Home() {
       <main className="mx-auto max-w-3xl px-6 py-16 space-y-20">
         <Hero />
         <SocialLinks />
-        <SkillsGrid />
         <ProjectsSection />
+        <SkillsGrid />
         <ExperienceTimeline />
         <EducationTimeline />
       </main>

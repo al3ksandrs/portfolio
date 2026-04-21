@@ -26,6 +26,8 @@ const latest: Project[] = [
       "LeerMatch is a team built software project developed during a university semester. The platform is designed to safely connect students (and parents) with qualified teachers for academic support. The core focus of the system is child safety, role-based access control, and matching between learners and educators.",
     tags: ["Web Application", "Deployment"],
     href: "#",
+    previewMedia: "/project-images/leermatch-1.mp4",
+    detailMedia: "/project-images/leermatch-1.mp4",
   },
 ];
 
@@ -37,6 +39,8 @@ const other: Project[] = [
       "The AutoMagic smartplug controller app was developed to manage and interact with smartplugs. This was developed as a team project for a mobile development semester. It is an Android application made with Kotlin. It utilizes Bluetooth and QR code scanning to connect and configure new plug nodes and sensors.",
     tags: ["Mobile Application"],
     href: "#",
+    previewMedia: "/project-images/noonode-1.mp4",
+    detailMedia: "/project-images/noonode-1.mp4",
   },
 ];
 
