@@ -6,6 +6,7 @@ import ProjectsSection from "./components/ProjectsSection";
 import ExperienceTimeline from "./components/ExperienceTimeline";
 import EducationTimeline from "./components/EducationTimeline";
 import Footer from "./components/Footer";
+import SlideIn from "./components/SlideIn";
 
 export default function Home() {
   return (
@@ -14,10 +15,18 @@ export default function Home() {
       <main className="mx-auto max-w-3xl px-6 py-16 space-y-20">
         <Hero />
         <SocialLinks />
-        <ProjectsSection />
-        <SkillsGrid />
-        <ExperienceTimeline />
-        <EducationTimeline />
+        <SlideIn>
+          <ProjectsSection />
+        </SlideIn>
+        <SlideIn>
+          <SkillsGrid />
+        </SlideIn>
+        <SlideIn>
+          <ExperienceTimeline />
+        </SlideIn>
+        <SlideIn>
+          <EducationTimeline />
+        </SlideIn>
       </main>
       <Footer />
     </div>
